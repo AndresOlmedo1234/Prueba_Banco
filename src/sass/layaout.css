@@ -1,0 +1,14 @@
+.body {
+  display: flex;
+  height: 583px;
+  background-color: #160F41;
+}/*# sourceMappingURL=layaout.css.map */
+
+
+@media (max-width: 768px) {
+  .body {
+    display: flex;
+    height: 583px;
+    background-color: rgb(26, 65, 15);
+  }/*# sourceMappingURL=layaout.css.map */
+}
