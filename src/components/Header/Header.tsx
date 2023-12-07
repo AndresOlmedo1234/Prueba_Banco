@@ -2,10 +2,7 @@ import React, { useEffect } from "react";
 import "../../sass/layaout.css";
 
 function Hero() {
-  const widht = window.innerWidth;
-  useEffect(() => {
-    console.log("widht", widht);
-  }, [widht]);
+
 
   const Content = () => {
     return (
