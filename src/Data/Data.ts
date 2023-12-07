@@ -13,5 +13,42 @@ export const DataComponenteSecond = {
     titulo: "Múltiples opciones de cobro",
     cuerpo: " Cobra tu Giro en efectivo, en tu Cuenta Corriente, de Ahorros,Cuenta Amiga o tu cuenta.",
   };
+
+  export const BodyFirst = [
+    "DolEx",
+    "RTC",
+    "Moneytrans",
+    "Giromex",
+    "Sharemoney",
+    "UNO",
+    "Ria",
+    "Transfast",
+    "Viamericas",
+    "MoneyGram",
+    "qdqd",
+  ];
+
+  export const BodySecond = [
+    "Capital Serives",
+    "Monty",
+    "RTC",
+    "Connect Plus",
+    "Transfat",
+    "Itransfer",
+    " Latin travel",
+    "Small World",
+    "MoneyGram",
+    "Thunes",
+    "Terrapay",
+  ];
+
+  export const BodyThird = [
+    "BancoEstado",
+    "AFEX",
+    "MoneyGram",
+    "Thunes",
+    "Global66",
+    "Terrapay",
+  ];
   
   
