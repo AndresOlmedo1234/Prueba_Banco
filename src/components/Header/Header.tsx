@@ -1,295 +1,80 @@
 import React, { useEffect } from "react";
 import "../../sass/layaout.css";
-import { graphql, useStaticQuery } from "gatsby";
-import Img from "gatsby-image";
 
-function Header() {
+function Hero() {
   const widht = window.innerWidth;
-  /* const data = useStaticQuery(graphql`
-    query {
-      file(relativePath: { eq: "../images/images1.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 1000) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `); */
-
   useEffect(() => {
     console.log("widht", widht);
   }, [widht]);
 
-  return (
-    <div
-    className="body"
-    >
-      <div
-        style={{
-          width: "400px",
-          height: "583px",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "flex-start",
-          gap: "32px",
-          display: "inline-flex",
-        }}
-      >
-        <div
-          style={{
-            height: "272px",
-            flexDirection: "column",
-            justifyContent: "flex-start",
-            alignItems: "flex-start",
-            gap: "12px",
-            display: "flex",
-          }}
-        >
-          <div
-            style={{
-              width: "400px",
-              color: "white",
-              fontSize: "12px",
-              fontFamily: "Nunito Sans",
-              fontWeight: 700,
-              textTransform: "uppercase",
-              lineHeight: "16.80px",
-              letterSpacing: "2.40px",
-              wordWrap: "break-word",
-            }}
-          >
-            remesas
-          </div>
+  const Content = () => {
+    return (
+      <div className="containerGeneral">
+        <div className="contentFirst">
+          <div className="remesas">remesas</div>
           <div style={{ width: "400px" }}>
-            <span
-              style={{
-                color: "#ED99C5",
-                fontSize: "44px",
-                fontFamily: "Nunito Sans",
-                fontWeight: 700,
-                lineHeight: "52.80px",
-                wordWrap: "break-word",
-              }}
-            >
-              Tus Giros te acercan{" "}
-            </span>
-            <span
-              style={{
-                color: "white",
-                fontSize: "44px",
-                fontFamily: "Nunito Sans",
-                fontWeight: 700,
-                lineHeight: "52.80px",
-                wordWrap: "break-word",
-              }}
-            >
-              a los que están lejos
-            </span>
-          </div>
-          <div
-            style={{
-              height: "72px",
-              flexDirection: "column",
-              justifyContent: "flex-start",
-              alignItems: "flex-start",
-              gap: "12px",
-              display: "flex",
-            }}
-          >
-            <div
-              style={{
-                height: "72px",
-                flexDirection: "column",
-                justifyContent: "flex-start",
-                alignItems: "flex-start",
-                gap: "8px",
-                display: "flex",
-              }}
-            >
-              <div
-                style={{
-                  alignSelf: "stretch",
-                  justifyContent: "flex-start",
-                  alignItems: "center",
-                  gap: "12px",
-                  display: "inline-flex",
-                }}
-              >
-                <div
-                  style={{
-                    flex: "1 1 0",
-                    color: "white",
-                    fontSize: "16px",
-                    fontFamily: "Nunito Sans",
-                    fontWeight: 400,
-                    lineHeight: "24px",
-                    wordWrap: "break-word",
-                  }}
+            <span className="text">Tus Giros te acercan </span>
+            <span className="text">a los que están lejos</span>
+
+            <p className="contenerdorFirst--texto__centrado">
+              Recibe dinero del exterior en tu cuenta o envíalo a más de 200
+              países como Colombia, Perú y Chile de forma rápida.
+            </p>
+
+            <div className="contentSecond">
+              <button className="btnRequisitos">
+                Ver Requisitos{" "}
+                <svg
+                  width="17"
+                  height="17"
+                  viewBox="0 0 17 17"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
-                  Recibe dinero del exterior en tu cuenta o envíalo a más de 200
-                  países como Colombia, Perú y Chile de forma rápida.
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          style={{
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "flex-start",
-            gap: "16px",
-            display: "flex",
-          }}
-        >
-          <div
-            style={{
-              width: "286px",
-              height: "48px",
-              flexDirection: "column",
-              justifyContent: "flex-start",
-              alignItems: "flex-start",
-              gap: "16px",
-              display: "flex",
-            }}
-          >
-            <div
-              style={{
-                width: "286px",
-                flex: "1 1 0",
-                flexDirection: "column",
-                justifyContent: "flex-start",
-                alignItems: "flex-start",
-                gap: "16px",
-                display: "flex",
-              }}
-            >
-              <div
-                style={{
-                  width: "286px",
-                  height: "48px",
-                  flexDirection: "column",
-                  justifyContent: "flex-start",
-                  alignItems: "flex-start",
-                  gap: "16px",
-                  display: "flex",
-                }}
-              >
-                <div
-                  style={{
-                    alignSelf: "stretch",
-                    flex: "1 1 0",
-                    paddingLeft: "20px",
-                    paddingRight: "20px",
-                    paddingTop: "12px",
-                    paddingBottom: "12px",
-                    background: "#D2006E",
-                    borderRadius: "32px",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    gap: "8px",
-                    display: "inline-flex",
-                  }}
-                >
-                  <div
-                    style={{
-                      textAlign: "center",
-                      color: "white",
-                      fontSize: "16px",
-                      fontFamily: "Nunito Sans",
-                      fontWeight: 700,
-                      lineHeight: "24px",
-                      wordWrap: "break-word",
-                    }}
-                  >
-                    Ver Requisitos
-                  </div>
-                  <div
-                    style={{
-                      width: "16px",
-                      height: "16px",
-                      position: "relative",
-                    }}
-                  >
-                    <div
-                      style={{
-                        width: "12px",
-                        height: "11.20px",
-                        left: "2px",
-                        top: "2.40px",
-                        position: "absolute",
-                        background: "white",
-                      }}
+                  <g id="arrow-forward">
+                    <path
+                      id="Vector"
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M8.33431 3.13434C8.64673 2.82192 9.15327 2.82192 9.46569 3.13434L14.2657 7.93434C14.5781 8.24676 14.5781 8.75329 14.2657 9.06571L9.46569 13.8657C9.15327 14.1781 8.64673 14.1781 8.33431 13.8657C8.0219 13.5533 8.0219 13.0468 8.33431 12.7343L11.7686 9.30002H3.3C2.85817 9.30002 2.5 8.94185 2.5 8.50002C2.5 8.0582 2.85817 7.70002 3.3 7.70002H11.7686L8.33431 4.26571C8.0219 3.95329 8.0219 3.44676 8.33431 3.13434Z"
+                      fill="white"
                     />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            style={{
-              width: "286px",
-              flexDirection: "column",
-              justifyContent: "flex-start",
-              alignItems: "flex-start",
-              gap: "16px",
-              display: "flex",
-            }}
-          >
-            <div
-              style={{
-                alignSelf: "stretch",
-                flex: "1 1 0",
-                paddingLeft: "20px",
-                paddingRight: "20px",
-                paddingTop: "12px",
-                paddingBottom: "12px",
-                borderRadius: "32px",
-                border: "2px #EDEDED solid",
-                justifyContent: "center",
-                alignItems: "center",
-                gap: "8px",
-                display: "inline-flex",
-              }}
-            >
-              <div
-                style={{
-                  textAlign: "center",
-                  color: "white",
-                  fontSize: "16px",
-                  fontFamily: "Nunito Sans",
-                  fontWeight: 700,
-                  lineHeight: "24px",
-                  wordWrap: "break-word",
-                }}
-              >
+                  </g>
+                </svg>
+              </button>
+              <button className="btnAbrirCUenta">
                 No tienes cuenta? Ábrela aquí
-              </div>
-              <div
-                style={{ width: "16px", height: "16px", position: "relative" }}
-              >
-                <div
-                  style={{
-                    width: "12px",
-                    height: "11.20px",
-                    left: "2px",
-                    top: "2.40px",
-                    position: "absolute",
-                    background: "white",
-                  }}
-                />
-              </div>
+                <svg
+                  width="17"
+                  height="17"
+                  viewBox="0 0 17 17"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="arrow-forward">
+                    <path
+                      id="Vector"
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M8.33431 3.13434C8.64673 2.82192 9.15327 2.82192 9.46569 3.13434L14.2657 7.93434C14.5781 8.24676 14.5781 8.75329 14.2657 9.06571L9.46569 13.8657C9.15327 14.1781 8.64673 14.1781 8.33431 13.8657C8.0219 13.5533 8.0219 13.0468 8.33431 12.7343L11.7686 9.30002H3.3C2.85817 9.30002 2.5 8.94185 2.5 8.50002C2.5 8.0582 2.85817 7.70002 3.3 7.70002H11.7686L8.33431 4.26571C8.0219 3.95329 8.0219 3.44676 8.33431 3.13434Z"
+                      fill="white"
+                    />
+                  </g>
+                </svg>
+              </button>
             </div>
           </div>
         </div>
       </div>
-      <img
-        style={{ width: "709px", height: "583px" }}
-        src="https://via.placeholder.com/709x583"
-      />
+    );
+  };
+
+  return (
+    <div className="body">
+      <Content />
+      <div className="imagesHero"></div>;
     </div>
   );
 }
 
-export default Header;
+export default Hero;

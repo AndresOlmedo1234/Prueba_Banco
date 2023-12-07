@@ -1,13 +1,299 @@
-.body {
-  display: flex;
-  width: 1000;
-  height: 583px;
-  background-color: #160F41;
+*,
+html {
+  font-family: "Nunito Sans", sans-serif;
+  padding: 0px;
+  margin: 0px;
 }
 
-.header {
+.body {
   display: flex;
-  width: 1000;
   height: 583px;
-  background-color: #160F41;
-}/*# sourceMappingURL=layaout.css.map */
+  background-color: #160f41;
+}
+
+.containerGeneral {
+  width: 50%;
+  height: 583px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  display: inline-flex;
+}
+
+@media (max-width: 768px) {
+  .body {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .containerGeneral {
+    height: 2000px;
+  }
+}
+
+.contentFirst {
+  height: 272px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  display: flex;
+}
+
+.remesas {
+  width: 400px;
+  color: white;
+  font-size: 12px;
+  font-family: Nunito Sans;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 16.8px;
+  letter-spacing: 2.4px;
+  word-wrap: break-word;
+}
+
+.text {
+  color: #ed99c5;
+  font-size: 44px;
+  font-family: Nunito Sans;
+  font-weight: 700;
+  line-height: 52.8px;
+  word-wrap: break-word;
+}
+
+.content {
+  height: 72px;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 12px;
+  display: flex;
+}
+
+.contentSecond {
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.imagesHero {
+  background-image: url(../images/heroDesktop.jpg);
+  width: 709px;
+  height: 583px;
+  object-fit: cover;
+}
+
+@media (max-width: 709px) {
+  .imagesHero {
+    background-image: url(../images/heroDesktop.jpg);
+    width: 709px;
+    height: 583px;
+    background-repeat: no-repeat;
+    object-fit: fill;
+    background-position: 10px center;
+  }
+}
+
+.self-start {
+  align-self: flex-start;
+}
+
+/* 
+ */
+
+.contenerdorFirst--texto {
+  align-self: stretch;
+  text-align: center;
+  color: #ffffff;
+  width: 400px;
+}
+
+.contenerdorFirst--texto__centrado {
+  text-align: left;
+  color: #ffffff;
+}
+
+.btnRequisitos {
+  display: flex;
+  padding: 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  outline: none;
+  color: white;
+  align-self: stretch;
+  background-color: #d2006e;
+  border-radius: 32px;
+  border: none;
+  flex: 1 0;
+  width: 100%;
+  height: 20%;
+}
+.btnAbrirCUenta {
+  display: flex;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+  background-color: transparent !important;
+  color: white;
+  border-radius: 32px;
+  flex: 1 0;
+  width: 100%;
+  height: 20%;
+}
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 480) {
+  .body {
+    display: flex;
+    height: 583px;
+    background-color: red;
+  }
+}
+
+.SectionRecibeMoney--text {
+  text-align: left;
+  //max-width: 400px;
+}
+
+.SectionRecibeMoney {
+  display: flex;
+  font-weight: 700;
+  font-size: 16px;
+  // padding: var(--spacing-spacing-xxl-01, 96px) 217px;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.txt-Exterior {
+  color: var(--text-text-color-default, #121212);
+  /* Web/Bold/Headline & Subtitles/Subtitle 1 */
+  font-family: Nunito Sans;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%; /* 39.2px */
+}
+
+.send {
+  background-color: #d2006e;
+  display: flex;
+  padding: var(--spacing-spacing-lg-02, 48px) var(--spacing-spacing-lg-01, 32px);
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: var(--spacing-spacing-lg-01, 32px);
+  border-radius: 30px;
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .send {
+    background-color: #d2006e;
+    display: flex;
+    color: #ffffff;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: var(--spacing-spacing-lg-01, 32px);
+  }
+}
+
+.sectionGen {
+  padding: 96px 217px 0px 217px;
+  max-width: 30%;
+}
+
+.div-enviar {
+  background-color: #160f41;
+  text-align: left;
+  color: #ffffff;
+}
+.text-money {
+  color: #0b4401;
+  background-color: #e7f3e5;
+  font-family: Nunito Sans;
+  font-size: 12px;
+  width: 140px;
+  text-align: center;
+  border-radius: 50px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 115%; /* 16.1px */
+}
+
+.text-money__btn {
+  padding: 3px 1px;
+}
+
+.container-center {
+  padding: 96px 217px;
+  gap: 60px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media (max-width: 768px) {
+  .container-center {
+    padding: 96px 117px;
+    gap: 60px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.listaMarcas {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2px;
+}
+
+.image_name {
+  background-image: url(../images/Frame.jpg);
+  height: 600px;
+  width: 450px;
+  background-repeat: no-repeat;
+}
+.listaMarcas--marca {
+  text-align: left;
+}
+
+.centrado {
+  padding: 96px 217px;
+}
+
+.centrado--noVertical {
+  padding: 30px 217px;
+}
+
+@media (max-width: 768px) {
+  .centrado {
+    padding: 96px 50px;
+  }
+
+  .centrado--noVertical {
+    padding: 30px 50px;
+  }
+}
+
+.col-span-2 {
+  text-align: left;
+
+  grid-column: span 1 / span 1;
+}
+
+.text-bold {
+  font-weight: 700;
+  font-size: 20px;
+}
