@@ -123,47 +123,68 @@ function Body() {
     );
   };
 
+  const Top = () => {
+    return (
+      <>
+        <TopComponent mostrar={true} texto="Si recibes dinero" />
+        <SectionPrimary
+          estado={true}
+          titulo={DataComponenteFirst.titulo}
+          parrafo={DataComponenteFirst.cuerpo}
+        />
+        <TopComponent mostrar={true} texto="Si envias dinero" />
+        <SectionPrimary
+          estado={false}
+          titulo={DataComponenteSecond.titulo}
+          parrafo={DataComponenteSecond.cuerpo}
+        />
+      </>
+    );
+  };
+
+  const Center = () => {
+    return (
+      <>
+        <ContentFragment
+          className="send"
+          texto="Envia hasta $9.000 por transacción o acumulado en el mes"
+          color="#D2006E"
+          textButtom="Ver Requisitos"
+          colorButtom="#160F41"
+        />
+        <Share />
+        <From texto="Desde Estados Unidos" cuerpo={BodyFirst} />
+        <From texto="Desde Europa" cuerpo={BodySecond} />
+        <From texto="Desde Sudamerica" cuerpo={BodyThird} />
+      </>
+    );
+  };
+
+  const Bottom = () => {
+    return (
+      <>
+        <FragmentBottom />
+        <div>
+          <TopComponent mostrar={false} texto="Requisitos" />
+          <Requisitos />
+        </div>
+        <ContentFragment
+          colorButtom="#D2006E"
+          className="send"
+          textButtom="Contactarme con el Banco"
+          texto="Te ayudamos a resolver todas tu dudas"
+          color="#160F41"
+        />
+      </>
+    );
+  };
+
   return (
     <>
-      <TopComponent mostrar={true} texto="Si recibes dinero" />
-      <SectionPrimary
-        estado={true}
-        titulo={DataComponenteFirst.titulo}
-        parrafo={DataComponenteFirst.cuerpo}
-      />
-      <TopComponent mostrar={true} texto="Si envias dinero" />
-      <SectionPrimary
-        estado={false}
-        titulo={DataComponenteSecond.titulo}
-        parrafo={DataComponenteSecond.cuerpo}
-      />
-      <ContentFragment
-        className="send"
-        texto="Envia hasta $9.000 por transacción o acumulado en el mes"
-        color="#D2006E"
-        textButtom="Ver Requisitos"
-        colorButtom="#160F41"
-      />
-      <Share />
-      <From texto="Desde Estados Unidos" cuerpo={BodyFirst} />
-      <From texto="Desde Europa" cuerpo={BodySecond} />
-      <From texto="Desde Sudamerica" cuerpo={BodyThird} />
-
-      <FragmentBottom />
-      <div>
-        <TopComponent mostrar={false} texto="Requisitos" />
-        <Requisitos />
-      </div>
-
-      <ContentFragment
-        colorButtom="#D2006E"
-        className="send"
-        textButtom="Contactarme con el Banco"
-        texto="Te ayudamos a resolver todas tu dudas"
-        color="#160F41"
-      />
+      <Top />
+      <Center />
+      <Bottom />
     </>
   );
 }
-
 export default Body;
